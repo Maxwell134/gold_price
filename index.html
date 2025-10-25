@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="3; url=gold-report.html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting to Gold Price Report...</title>
-  <style>
-    body {
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2em;
-      margin-bottom: 15px;
-    }
-    p {
-      font-size: 1.1em;
-      opacity: 0.9;
-    }
-    a {
-      color: #fff;
-      text-decoration: underline;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Welcome to Gold Price Trends 📊</h1>
-  <p>Redirecting you to the detailed report...</p>
-  <p>If you are not redirected automatically, <a href="gold-report.html">click here</a>.</p>
-  <p>Devops Role, <a href="devops.html">click here</a>.</p>
-  
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">📊 Dashboard</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gold-report.html">Gold Report</a></li>
+                <li><a href="devops.html">DevOps</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="card">
+            <h1>Welcome to the Dashboard</h1>
+            <p>Access all your important tools and reports from one centralized location.</p>
+        </div>
+
+        <div class="card">
+            <h2>📈 Gold Price Report</h2>
+            <p>Track gold prices and market trends in real-time. Get detailed insights into price movements and historical data.</p>
+            <a href="gold-report.html" class="btn">View Gold Prices</a>
+        </div>
+
+        <div class="card">
+            <h2>🛠️ DevOps Portal</h2>
+            <p>Access your development and operations tools. Manage your projects, pipelines, and repositories.</p>
+            <a href="devops.html" class="btn">Open DevOps</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
