@@ -2,6 +2,8 @@
 name: Deploy static content to Pages
 
 on:
+  push: 
+    branches: ["main"]
   # Runs on pushes targeting the default branch
  
   workflow_dispatch:
