@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-category {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-bottom: 12px;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .news-date {
+            color: var(--secondary-color);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+
+        .news-source {
+            color: var(--secondary-color);
+            font-size: 0.85em;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .category-filter {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: var(--secondary-color);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            background: var(--primary-color);
+        }
+
+        .source-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">📊 Dashboard</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gold-report.html">Gold Report</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="devops.html">DevOps</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="card">
+            <h1>📰 Latest News Updates</h1>
+            <p>Stay informed with the latest headlines from around the world. Last updated: October 26, 2025</p>
+        </div>
+
+        <div class="card">
+            <div class="category-filter">
+                <button class="filter-btn" data-category="all">All News</button>
+                <button class="filter-btn" data-category="world">World</button>
+                <button class="filter-btn" data-category="politics">Politics</button>
+                <button class="filter-btn" data-category="business">Business</button>
+                <button class="filter-btn" data-category="tech">Technology</button>
+                <button class="filter-btn" data-category="sports">Sports</button>
+            </div>
+
+            <div class="news-grid">
+                <div class="news-card" data-category="world">
+                    <span class="news-category">World</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Trump Says He's 'Disappointed' in Canada, No Plans to Meet Carney in Asia</h3>
+                    <p>Former US President expresses disappointment with Canada's policies ahead of ASEAN summit, declining meeting with Mark Carney.</p>
+                    <div class="news-source">Source: WION News</div>
+                </div>
+
+                <div class="news-card" data-category="world">
+                    <span class="news-category">World</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Russia-Ukraine War: Overnight Russian Strikes in Kyiv Kill 4, Injure Twenty</h3>
+                    <p>Latest escalation in conflict as overnight strikes hit Ukrainian capital, causing casualties and infrastructure damage.</p>
+                    <div class="news-source">Source: WION News</div>
+                </div>
+
+                <div class="news-card" data-category="tech">
+                    <span class="news-category">Technology</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Trump Pardons Binance Founder Changpeng Zhao, Lifts Restrictions</h3>
+                    <p>Major development in cryptocurrency world as restrictions on Binance founder are lifted following presidential pardon.</p>
+                    <div class="news-source">Source: WION News</div>
+                </div>
+
+                <div class="news-card" data-category="politics">
+                    <span class="news-category">Politics</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">"I Am Not Done": Kamala Harris Confirms Plans for Future Presidential Run</h3>
+                    <p>Vice President Harris signals political ambitions, suggesting future presidential campaign.</p>
+                    <div class="news-source">Source: NDTV</div>
+                </div>
+
+                <div class="news-card" data-category="sports">
+                    <span class="news-category">Sports</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Rohit Sharma Shatters Virat's World Record With Fiery Ton In 3rd ODI</h3>
+                    <p>Indian captain breaks long-standing record in spectacular innings against Australia.</p>
+                    <div class="news-source">Source: NDTV Sports</div>
+                </div>
+
+                <div class="news-card" data-category="science">
+                    <span class="news-category">Science</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Possible 'Super-Earth' Discovered Just 20 Light-Years Away</h3>
+                    <p>Scientists announce exciting discovery of potentially habitable planet in nearby star system.</p>
+                    <div class="news-source">Source: NDTV</div>
+                </div>
+
+                <div class="news-card" data-category="business">
+                    <span class="news-category">Business</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Global Markets Hit New High Amid Tech Sector Surge</h3>
+                    <p>Stock markets worldwide reach record levels as technology companies lead unprecedented rally.</p>
+                    <div class="news-source">Source: Reuters</div>
+                </div>
+
+                <div class="news-card" data-category="world">
+                    <span class="news-category">World</span>
+                    <div class="news-date">October 26, 2025</div>
+                    <h3 class="news-title">Switched At Birth: Japanese Driver Discovers He's Heir to Fortune</h3>
+                    <p>Incredible story unfolds as 60-year-old lorry driver learns of his true identity and inheritance.</p>
+                    <div class="news-source">Source: NDTV</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Dashboard. All rights reserved.</p>
+            <p>News sources: NDTV, WION, Reuters</p>
+        </div>
+    </footer>
+
+    <script>
+        // Category filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.dataset.category;
+                
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.style.background = 'var(--secondary-color)';
+                });
+                
+                // Add active class to clicked button
+                button.style.background = 'var(--primary-color)';
+                
+                // Filter news cards
+                document.querySelectorAll('.news-card').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
