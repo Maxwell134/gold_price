@@ -101,7 +101,7 @@
     <div class="main-content">
         <div class="card">
             <h1>📊 Gold Price Trend Analysis Report - Kokrajhar</h1>
-            <p>Last 3 Weeks Data (October 1-25, 2025)</p>
+            <p>Last 4 Weeks Data (October 1-26, 2025)</p>
         </div>
 
         <div class="download-section">
@@ -120,7 +120,7 @@
         <div class="card">
             <h3>📋 What's Included in the Excel Sheet:</h3>
             <ul>
-                <li>Daily gold prices for 24K and 22K gold (Last 25 days)</li>
+                <li>Daily gold prices for 24K and 22K gold (Last 26 days)</li>
                 <li>Price per gram and per 10 grams</li>
                 <li>Daily percentage change calculations</li>
                 <li>Summary statistics (Highest, Lowest, Average)</li>
@@ -132,13 +132,13 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <h4>Current 24K Price</h4>
-                <div class="value">₹12,443</div>
-                <p style="margin-top: 10px; font-size: 0.9em;">per gram</p>
+                <div class="value">₹12,152</div>
+                <p style="margin-top: 10px; font-size: 0.9em;">per gram (Oct 26)</p>
             </div>
             <div class="stat-card">
-                <h4>3-Week Change</h4>
-                <div class="value">+5.88%</div>
-                <p style="margin-top: 10px; font-size: 0.9em;">₹6,910 gain</p>
+                <h4>4-Week Change</h4>
+                <div class="value">+3.40%</div>
+                <p style="margin-top: 10px; font-size: 0.9em;">₹3,999 gain/10g</p>
             </div>
             <div class="stat-card">
                 <h4>Peak Price (Oct 18)</h4>
@@ -148,7 +148,7 @@
         </div>
 
         <div class="card">
-            <h3>📈 Preview: Last 25 Days Gold Price Data</h3>
+            <h3>📈 Preview: Last 26 Days Gold Price Data</h3>
             <div class="table-container">
                 <table id="priceTable">
                     <thead>
@@ -172,14 +172,14 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>Data source: BankBazaar.com</p>
+            <p>Data source: Market estimates based on Kolkata & National prices</p>
             <p>© 2025 Gold Price Tracker. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <script>
-        // Gold price data for last 25 days
+        // Gold price data for last 26 days - Updated October 26, 2025
         const goldData = [
             { date: '2025-10-01', gold24k_gram: 11751.90, gold24k_10g: 117519, gold22k_gram: 10772.90, gold22k_10g: 107729 },
             { date: '2025-10-02', gold24k_gram: 11820.00, gold24k_10g: 118200, gold22k_gram: 10835.00, gold22k_10g: 108350 },
@@ -205,7 +205,8 @@
             { date: '2025-10-22', gold24k_gram: 13063.90, gold24k_10g: 130639, gold22k_gram: 11975.90, gold22k_10g: 119759 },
             { date: '2025-10-23', gold24k_gram: 12725.90, gold24k_10g: 127259, gold22k_gram: 11545.90, gold22k_10g: 115459 },
             { date: '2025-10-24', gold24k_gram: 12513.90, gold24k_10g: 125139, gold22k_gram: 11470.90, gold22k_10g: 114709 },
-            { date: '2025-10-25', gold24k_gram: 12442.90, gold24k_10g: 124429, gold22k_gram: 11405.90, gold22k_10g: 114059 }
+            { date: '2025-10-25', gold24k_gram: 12442.90, gold24k_10g: 124429, gold22k_gram: 11405.90, gold22k_10g: 114059 },
+            { date: '2025-10-26', gold24k_gram: 12151.80, gold24k_10g: 121518, gold22k_gram: 11155.20, gold22k_10g: 111552 }
         ];
 
         // Calculate percentage changes
@@ -246,7 +247,6 @@
 
         // Download Excel function
         function downloadExcel() {
-            // Prepare data for Excel
             const excelData = goldData.map(item => ({
                 'Date': item.date,
                 '24K Gold (₹/gram)': item.gold24k_gram.toFixed(2),
@@ -257,7 +257,6 @@
                 'Trend': item.trend
             }));
 
-            // Add summary statistics
             const stats = [
                 {},
                 { 'Date': 'SUMMARY STATISTICS' },
@@ -268,11 +267,7 @@
             ];
 
             const finalData = [...excelData, ...stats];
-
-            // Create workbook
             const ws = XLSX.utils.json_to_sheet(finalData);
-            
-            // Set column widths
             ws['!cols'] = [
                 { wch: 15 }, { wch: 18 }, { wch: 18 }, 
                 { wch: 18 }, { wch: 18 }, { wch: 15 }, { wch: 8 }
@@ -280,10 +275,7 @@
 
             const wb = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(wb, ws, 'Gold Prices - Kokrajhar');
-
-            // Download
             XLSX.writeFile(wb, 'Kokrajhar_Gold_Prices_Oct_2025.xlsx');
-            
             alert('✅ Excel file downloaded successfully!\n\nFile: Kokrajhar_Gold_Prices_Oct_2025.xlsx');
         }
 
@@ -295,7 +287,6 @@
                 csv += `${item.date},${item.gold24k_gram.toFixed(2)},${item.gold24k_10g},${item.gold22k_gram.toFixed(2)},${item.gold22k_10g},${item.change},${item.trend}\n`;
             });
 
-            // Add summary
             csv += '\nSUMMARY STATISTICS\n';
             csv += `Highest 24K Price,,,${Math.max(...goldData.map(d => d.gold24k_10g))}\n`;
             csv += `Lowest 24K Price,,,${Math.min(...goldData.map(d => d.gold24k_10g))}\n`;
@@ -311,7 +302,6 @@
             a.click();
             document.body.removeChild(a);
             window.URL.revokeObjectURL(url);
-
             alert('✅ CSV file downloaded successfully!\n\nFile: Kokrajhar_Gold_Prices_Oct_2025.csv');
         }
     </script>
