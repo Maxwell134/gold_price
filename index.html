@@ -3,119 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gold Price & News Update</title>
     <style>
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .news-card {
-            background: white;
-            border-radius: 10px;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
             padding: 20px;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease;
+            background-color: #f4f4f4;
         }
-
-        .news-card:hover {
-            transform: translateY(-5px);
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-
-        .news-date {
-            color: var(--secondary-color);
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .news-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #f1c40f;
+        }
+        .news-item h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+        .news-item p {
+            margin: 5px 0;
+            color: #34495e;
+        }
+        .price-highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #7f8c8d;
             font-size: 0.9em;
-            margin-bottom: 10px;
         }
-
-        .news-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-right: 8px;
-            margin-bottom: 12px;
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .news-title {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-
-        .news-summary {
-            color: var(--text-secondary);
-            font-size: 0.95em;
-            line-height: 1.5;
+        .date-time {
+            text-align: right;
+            color: #95a5a6;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">📊 Dashboard</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="gold-report.html">Gold Report</a></li>
-                <li><a href="devops.html">DevOps</a></li>
-                <li><a href="news.html">News</a></li>
-                
-            </ul>
-        </div>
-    </nav>
-
-    <div class="main-content">
-        <div class="card">
-            <h1>Welcome to the Dashboard</h1>
-            <p>Access all your important tools and reports from one centralized location.</p>
+    <div class="container">
+        <h1>🌟 Gold Price & Market News Update</h1>
+        
+        <div class="date-time">
+            <p>Last Updated: October 31, 2025 | 10:30 AM IST</p>
         </div>
 
-        <div class="card">
-            <h2>📰 Latest News & Updates</h2>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-date">October 26, 2025</div>
-                    <span class="news-tag">Global Security</span>
-                    <h3 class="news-title">International Security Concerns</h3>
-                    <p class="news-summary">Three Chinese nationals arrested in Georgia for attempting to illegally purchase uranium. Meanwhile, Russian attacks on Ukraine result in 4 casualties as Kyiv's allies maintain pressure on Moscow.</p>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">October 25, 2025</div>
-                    <span class="news-tag">Global Politics</span>
-                    <h3 class="news-title">Peace Initiatives & Natural Disasters</h3>
-                    <p class="news-summary">Trump advocates for "enduring peace" in conflict zones and thanks Qatar for mediation efforts. Hurricane Melissa intensifies as it approaches Jamaica, raising concerns.</p>
-                </div>
-                <div class="news-card">
-                    <div class="news-date">October 24, 2025</div>
-                    <span class="news-tag">Sports & Science</span>
-                    <h3 class="news-title">World Series & Scientific Breakthrough</h3>
-                    <p class="news-summary">Blue Jays power past Dodgers in Game 1 of the World Series. Scientists make breakthrough in lab-grown human teeth research, promising new dental treatment options.</p>
-                </div>
+        <div class="section">
+            <h2>Today's Gold Price Highlights</h2>
+            <p>24K Gold (10g): <span class="price-highlight">₹1,21,690.00</span></p>
+            <p>22K Gold (10g): <span class="price-highlight">₹1,11,560.00</span></p>
+            <p>Price Change (24K): <span class="price-highlight">-0.75%</span></p>
+            <a href="gold_prices.html">View detailed price breakdown</a>
+        </div>
+
+        <div class="section">
+            <h2>Latest Market News</h2>
+            
+            <div class="news-item">
+                <h3>Gold Prices Dip as Global Markets React to Fed's Latest Policy Decision</h3>
+                <p>Gold prices decreased by 0.75% today as markets adjusted to the Federal Reserve's recent monetary policy stance. The decline marks the second consecutive day of losses in the precious metal's value.</p>
+                <p><small>Source: Financial Times | 2 hours ago</small></p>
+            </div>
+
+            <div class="news-item">
+                <h3>Asian Markets Show Mixed Response to Gold's Movement</h3>
+                <p>Asian gold markets displayed varied reactions to the global price movement, with some markets seeing increased buying activity despite the price dip. Experts suggest this could indicate a potential price stabilization in the coming days.</p>
+                <p><small>Source: Reuters | 4 hours ago</small></p>
+            </div>
+
+            <div class="news-item">
+                <h3>Jewelry Market Adapts to Price Fluctuations</h3>
+                <p>Local jewelers report adjusting their inventory strategies in response to recent price volatility. Many are offering special festive season discounts to maintain sales momentum.</p>
+                <p><small>Source: Local Market Report | 1 hour ago</small></p>
             </div>
         </div>
 
-        <div class="card">
-            <h2>📈 Gold Price Report</h2>
-            <p>Track gold prices and market trends in real-time. Get detailed insights into price movements and historical data.</p>
-            <a href="gold-report.html" class="btn">View Gold Prices</a>
+        <div class="section">
+            <h2>Market Analysis</h2>
+            <p>The current price movement shows a correction phase in the gold market, with prices dropping by ₹920 per 10 grams for 24K gold. This follows the global trend influenced by:</p>
+            <ul>
+                <li>Federal Reserve's monetary policy decisions</li>
+                <li>Strengthening of the US dollar</li>
+                <li>Changes in global economic indicators</li>
+            </ul>
+            <p>Technical analysts suggest watching the ₹1,21,000 support level for potential buying opportunities.</p>
         </div>
 
-        <div class="card">
-            <h2>🛠️ DevOps Portal</h2>
-            <p>Access your development and operations tools. Manage your projects, pipelines, and repositories.</p>
-            <a href="devops.html" class="btn">Open DevOps</a>
+        <div class="footer">
+            <p>Data sources: Major Financial Markets & Local Market Reports</p>
+            <p>© 2025 Gold Price Tracker | <a href="gold_prices.html">View Historical Data</a></p>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2025 Dashboard. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
