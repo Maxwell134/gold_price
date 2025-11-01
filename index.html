@@ -3,118 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gold Price & News Update</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 2px solid #f1c40f;
-            padding-bottom: 10px;
-        }
-        .section {
-            margin: 20px 0;
-            padding: 15px;
-            background: #f9f9f9;
-            border-radius: 5px;
-        }
-        .news-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-left: 3px solid #f1c40f;
-        }
-        .news-item h3 {
-            margin: 0;
-            color: #2c3e50;
-        }
-        .news-item p {
-            margin: 5px 0;
-            color: #34495e;
-        }
-        .price-highlight {
-            color: #e67e22;
-            font-weight: bold;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #7f8c8d;
-            font-size: 0.9em;
-        }
-        .date-time {
-            text-align: right;
-            color: #95a5a6;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Gold Price & Market News Update</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🌟 Gold Price & Market News Update</h1>
-        
-        <div class="date-time">
-            <p>Last Updated: October 31, 2025 | 10:30 AM IST</p>
-        </div>
-
-        <div class="section">
-            <h2>Today's Gold Price Highlights</h2>
-            <p>24K Gold (10g): <span class="price-highlight">₹1,21,690.00</span></p>
-            <p>22K Gold (10g): <span class="price-highlight">₹1,11,560.00</span></p>
-            <p>Price Change (24K): <span class="price-highlight">-0.75%</span></p>
-            <a href="gold_prices.html">View detailed price breakdown</a>
-        </div>
-
-        <div class="section">
-            <h2>Latest Market News</h2>
-            
-            <div class="news-item">
-                <h3>Gold Prices Dip as Global Markets React to Fed's Latest Policy Decision</h3>
-                <p>Gold prices decreased by 0.75% today as markets adjusted to the Federal Reserve's recent monetary policy stance. The decline marks the second consecutive day of losses in the precious metal's value.</p>
-                <p><small>Source: Financial Times | 2 hours ago</small></p>
-            </div>
-
-            <div class="news-item">
-                <h3>Asian Markets Show Mixed Response to Gold's Movement</h3>
-                <p>Asian gold markets displayed varied reactions to the global price movement, with some markets seeing increased buying activity despite the price dip. Experts suggest this could indicate a potential price stabilization in the coming days.</p>
-                <p><small>Source: Reuters | 4 hours ago</small></p>
-            </div>
-
-            <div class="news-item">
-                <h3>Jewelry Market Adapts to Price Fluctuations</h3>
-                <p>Local jewelers report adjusting their inventory strategies in response to recent price volatility. Many are offering special festive season discounts to maintain sales momentum.</p>
-                <p><small>Source: Local Market Report | 1 hour ago</small></p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Market Analysis</h2>
-            <p>The current price movement shows a correction phase in the gold market, with prices dropping by ₹920 per 10 grams for 24K gold. This follows the global trend influenced by:</p>
-            <ul>
-                <li>Federal Reserve's monetary policy decisions</li>
-                <li>Strengthening of the US dollar</li>
-                <li>Changes in global economic indicators</li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌟 Gold & News</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="gold_prices.html">Gold Prices</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="devops.html">DevOps</a></li>
             </ul>
-            <p>Technical analysts suggest watching the ₹1,21,000 support level for potential buying opportunities.</p>
         </div>
+    </nav>
 
-        <div class="footer">
-            <p>Data sources: Major Financial Markets & Local Market Reports</p>
-            <p>© 2025 Gold Price Tracker | <a href="gold_prices.html">View Historical Data</a></p>
+    <div class="main-content">
+        <div class="card">
+            <h1>🌟 Gold Price & Market News Update</h1>
+            
+            <div class="date-time">
+                <p>Last Updated: November 01, 2025 | 06:00 PM IST</p>
+            </div>
+
+            <div class="section">
+                <h2>Today's Gold Price Highlights (Assam)</h2>
+                <p>24K Gold (10g): <span class="price-highlight">₹1,19,960.00</span></p>
+                <p>22K Gold (10g): <span class="price-highlight">₹1,14,250.00</span></p>
+                <a href="gold_prices.html" class="btn btn-primary mt-4">View detailed price breakdown</a>
+            </div>
+
+            <div class="section mt-8">
+                <h2>Latest Market News</h2>
+                
+                <div class="news-grid">
+                    <div class="news-card" data-category="finance">
+                        <span class="news-category finance">Finance</span>
+                        <div class="news-date">November 01, 2025</div>
+                        <h3 class="news-title">Global Gold Demand Sees Uptick Amid Economic Uncertainty</h3>
+                        <p class="news-summary">Reports indicate a significant rise in global gold demand as investors seek safe-haven assets in response to ongoing economic uncertainties and geopolitical tensions.</p>
+                        <div class="news-source">Source: Reuters</div>
+                    </div>
+
+                    <div class="news-card" data-category="national">
+                        <span class="news-category national">National</span>
+                        <div class="news-date">November 01, 2025</div>
+                        <h3 class="news-title">Indian Gold Imports Surge Ahead of Festive Season</h3>
+                        <p class="news-summary">India's gold imports have seen a substantial increase, driven by strong consumer demand in anticipation of the upcoming festive season and wedding events across the country.</p>
+                        <div class="news-source">Source: Economic Times</div>
+                    </div>
+
+                    <div class="news-card" data-category="world">
+                        <span class="news-category world">World</span>
+                        <div class="news-date">November 01, 2025</div>
+                        <h3 class="news-title">Central Banks Continue Gold Accumulation, Bolstering Prices</h3>
+                        <p class="news-summary">Several central banks worldwide have continued their trend of accumulating gold reserves, a move that is providing underlying support to international gold prices despite minor fluctuations.</p>
+                        <div class="news-source">Source: CNN</div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="news.html" class="btn btn-secondary">Read All News</a>
+                </div>
+            </div>
+
+            <div class="section mt-8">
+                <h2>Market Analysis</h2>
+                <p>The gold market currently reflects a cautious optimism. While global economic factors continue to exert pressure, strong demand from Asian markets and sustained central bank buying are providing robust support. Investors are keenly observing upcoming interest rate decisions and international trade developments for further cues.</p>
+                <ul>
+                    <li>Rising inflation concerns fueling investment in gold.</li>
+                    <li>Geopolitical events contributing to safe-haven demand.</li>
+                    <li>Strong physical demand from major consumers like India and China.</li>
+                </ul>
+                <p>Experts recommend closely monitoring global interest rate trends and currency movements for their impact on gold's short-term trajectory.</p>
+            </div>
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Gold Price & News Tracker. All rights reserved.</p>
+            <p>Data sources: BankBazaar.com, Major Financial News Outlets</p>
+        </div>
+    </footer>
 </body>
 </html>
